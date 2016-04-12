@@ -34,16 +34,21 @@ public class AcronymLookup {
         acronyms.add(poc);
         acronyms.add(serviceDesk);
         acronyms.add(serviceDelivery);
+        acronyms.add(businessReleaseAndImpl);
+        acronyms.add(qa);
+        acronyms.add(ui);
+        acronyms.add(ib);
+        acronyms.add(nga);
+        acronyms.add(salsa);
     }
 
     @GET
-    @Path("/search")
     @Produces(MediaType.APPLICATION_JSON)
     public String helloResource(@QueryParam("name") String name) {
         String acronymsJson = "[";
 
         for(int i = 0; i< acronyms.size(); i++) {
-            if(acronyms.get(i).getName().equalsIgnoreCase(name)) {
+            if(acronyms.get(i).getName().startsWith(name) || acronyms.get(i).getName().equalsIgnoreCase(name)) {
                 acronymsJson += acronyms.get(i).toString();
                 if (i != acronyms.size() - 1) {
                     acronymsJson += ",";
@@ -60,12 +65,12 @@ public class AcronymLookup {
     }
 
     @POST
-    @Path("/post")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response postAcronym(@QueryParam("acronym") String acronym) {
+    public Response postAcronym(Acronym acronym) {
         JSONObject incomingJson = new JSONObject(acronym);
 
         String pageName = incomingJson.getJSONObject("name").getString("pageName");
+        System.out.println(pageName);
 
         return Response.status(200).entity("").build();
     }

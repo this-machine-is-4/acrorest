@@ -9,6 +9,10 @@ public class Acronym {
     private String[] links;
     private String[] labels;
 
+    public Acronym() {
+
+    }
+
     public Acronym(String name, String description, String[] links, String[] labels) {
         this.name = name;
         this.description = description;
