@@ -2,6 +2,7 @@ package rest;
 
 import com.fasterxml.jackson.databind.util.JSONPObject;
 
+import javax.inject.Singleton;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import org.json.*;
 
 @Path("/acronyms")
+@Singleton
 public class AcronymLookup {
 
     private ArrayList<Acronym> acronyms = new ArrayList<>();
@@ -69,8 +71,7 @@ public class AcronymLookup {
     public Response postAcronym(Acronym acronym) {
         JSONObject incomingJson = new JSONObject(acronym);
 
-        String pageName = incomingJson.getJSONObject("name").getString("pageName");
-        System.out.println(pageName);
+        acronyms.add(acronym);
 
         return Response.status(200).entity("").build();
     }
