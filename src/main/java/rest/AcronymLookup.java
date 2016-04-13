@@ -39,8 +39,8 @@ public class AcronymLookup {
         Acronym isc2 = new Acronym("ISC", "Infrastructure Systems Consultant", links, labels);
         Acronym kek = new Acronym("KEK", "Key Encryption Key", links, labels);
         Acronym kiv = new Acronym("KIV", "Keep In View", links, labels);
-        Acronym kyc = new Acronym("KYC", "International Service Centre", links, labels);
-        Acronym kladm = new Acronym("KLADM", "Kirk, Luke, Ali, Dinesh and Mike. Five esteemed Lloyds Banking Group colleague who designed and created the No More Acronym(NMA) mobile web app.", new String[] {"www.NMA.com"}, new String[] {"NMA", "Innovation", "app"});
+        Acronym kyc = new Acronym("KYC", "Know Your Customer is the process of a business verifying the identity of its clients. The term is also used to refer to the bank regulation which governs these activities. Know your customer processes are also employed by companies of all sizes for the purpose of ensuring their proposed agents, consultants, or distributors are antibribery compliant. Banks, insurers and export creditors are increasingly demanding that customers provide detailed anti-corruption due diligence information, to verify their probity and integrity.", new String[]{"https://en.wikipedia.org/wiki/Know_your_customer"}, labels);
+        Acronym kladm = new Acronym("KLADM", "Kirk, Luke, Ali, Dinesh and Mike. Five esteemed Lloyds Banking Group colleague who designed and created the No More Acronym(NMA) mobile web app.", new String[] {"https://en.wikipedia.org/wiki/NMA"}, new String[] {"NMA", "Innovation", "app", "Clowns"});
 
 
 
