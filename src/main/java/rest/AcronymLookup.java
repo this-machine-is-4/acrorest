@@ -7,6 +7,8 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
+import java.util.List;
+
 import org.json.*;
 
 @Path("/acronyms")
@@ -46,12 +48,14 @@ public class AcronymLookup {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String helloResource(@QueryParam("name") String name) {
+    public Response helloResource(@QueryParam("name") String name) {
         String acronymsJson = "[";
-
+        List<Acronym> acronymList = new ArrayList<>();
         for(int i = 0; i< acronyms.size(); i++) {
-            if(acronyms.get(i).getName().startsWith(name) || acronyms.get(i).getName().equalsIgnoreCase(name)) {
-                acronymsJson += acronyms.get(i).toString();
+            Acronym acronym = acronyms.get(i);
+            if(acronym.getName().startsWith(name) || acronym.getName().equalsIgnoreCase(name)) {
+                acronymList.add(acronym);
+                acronymsJson += acronym.toString();
                 if (i != acronyms.size() - 1) {
                     acronymsJson += ",";
                 }
@@ -63,7 +67,7 @@ public class AcronymLookup {
         }
         acronymsJson += "]";
 
-        return acronymsJson;
+        return Response.ok().entity(acronymList).header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Header", "*").header("Access-Control-Allow-Method", "*").build();
     }
 
     @POST
