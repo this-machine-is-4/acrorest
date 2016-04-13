@@ -34,6 +34,16 @@ public class AcronymLookup {
         Acronym ib = new Acronym("IB", "Internet Banking is the platform used by commercial and retail customers to access Lloyds Bank services on the internet. It features an ever growing set of features and is available on mobile ", links2, new String[] {"Group Digital", "Group IT"});
         Acronym nga = new Acronym("NGA", "User Acceptance Testing", links, labels);
         Acronym salsa = new Acronym("SALSA", "Simple Architecture for Lightweight Service Aggregation. This is the middleware layer used by all channels to perform various operations e.g. applying for products or making payments.", links, new String[]{"Middleware", "Internet Banking"});
+        Acronym accept = new Acronym("ACCEPT", "ACCess Electronic Payments Terminal", links, new String[] {"Payments"});
+        Acronym isc = new Acronym("ISC", "International Service Centre", links, labels);
+        Acronym isc2 = new Acronym("ISC", "Infrastructure Systems Consultant", links, labels);
+        Acronym kek = new Acronym("KEK", "Key Encryption Key", links, labels);
+        Acronym kiv = new Acronym("KIV", "Keep In View", links, labels);
+        Acronym kyc = new Acronym("KYC", "International Service Centre", links, labels);
+        Acronym kladm = new Acronym("KLADM", "Kirk Luke Ali Dinesh Mike", new String[] {"www.NMA.com"}, new String[] {"NMA", "Innovation", "app"});
+
+
+
         acronyms.add(uat);
         acronyms.add(poc);
         acronyms.add(serviceDesk);
