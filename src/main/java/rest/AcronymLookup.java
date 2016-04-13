@@ -54,6 +54,14 @@ public class AcronymLookup {
         acronyms.add(ib);
         acronyms.add(nga);
         acronyms.add(salsa);
+        acronyms.add(accept);
+        acronyms.add(isc);
+        acronyms.add(isc2);
+        acronyms.add(kek);
+        acronyms.add(kiv);
+        acronyms.add(kyc);
+        acronyms.add(kladm);
+
     }
 
     @GET
