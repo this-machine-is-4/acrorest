@@ -40,7 +40,7 @@ public class AcronymLookup {
         Acronym kek = new Acronym("KEK", "Key Encryption Key", links, labels);
         Acronym kiv = new Acronym("KIV", "Keep In View", links, labels);
         Acronym kyc = new Acronym("KYC", "International Service Centre", links, labels);
-        Acronym kladm = new Acronym("KLADM", "Kirk Luke Ali Dinesh Mike", new String[] {"www.NMA.com"}, new String[] {"NMA", "Innovation", "app"});
+        Acronym kladm = new Acronym("KLADM", "Kirk, Luke, Ali, Dinesh and Mike. Five esteemed Lloyds Banking Group colleague who designed and created the No More Acronym(NMA) mobile web app.", new String[] {"www.NMA.com"}, new String[] {"NMA", "Innovation", "app"});
 
 
 
